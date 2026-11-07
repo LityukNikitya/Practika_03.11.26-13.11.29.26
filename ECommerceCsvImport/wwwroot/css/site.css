@@ -1,0 +1,126 @@
+html {
+  font-size: 17px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f5efe0;
+  color: #3b2f25;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0.65rem 0.75rem;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #a67c52;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar {
+  background-color: #e8dcc2 !important;
+  border-bottom: 2px solid #c9b48a !important;
+}
+
+.navbar-brand, .navbar .nav-link {
+  color: #4a3626 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #8b5a2b !important;
+  text-decoration: underline;
+}
+
+.card {
+  background-color: #fffaf0;
+  border: 1px solid #d8c8a6;
+  border-radius: 6px;
+}
+
+.card-header.bg-primary {
+  background-color: #8b6b4a !important;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #4a3626;
+}
+
+a {
+  color: #8b5a2b;
+}
+
+a:hover {
+  color: #5e3a18;
+}
+
+.btn-primary, .btn-success {
+  background-color: #8b6b4a;
+  border-color: #8b6b4a;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-success:hover {
+  background-color: #6f533a;
+  border-color: #6f533a;
+  color: #fff;
+}
+
+.btn-outline-secondary, .btn-outline-success {
+  color: #6f533a;
+  border-color: #8b6b4a;
+}
+
+.btn-outline-secondary:hover, .btn-outline-success:hover {
+  background-color: #8b6b4a;
+  border-color: #8b6b4a;
+  color: #fff;
+}
+
+.form-control, .form-select {
+  background-color: #fffdf7;
+  border-color: #c9b48a;
+}
+
+.table {
+  --bs-table-striped-bg: #f3ead4;
+  --bs-table-hover-bg: #ecdfbf;
+  --bs-table-bg: transparent;
+  color: #3b2f25;
+}
+
+.table-dark {
+  --bs-table-bg: #6f533a;
+  --bs-table-border-color: #8b6b4a;
+}
+
+.alert-info {
+  background-color: #efe3c6;
+  border-color: #d8c8a6;
+  color: #4a3626;
+}
+
+.footer {
+  background-color: #e8dcc2;
+  border-top: 1px solid #c9b48a !important;
+  color: #6f533a !important;
+}
