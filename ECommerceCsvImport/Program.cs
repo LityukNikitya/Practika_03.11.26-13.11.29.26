@@ -1,4 +1,5 @@
 using ECommerceCsvImport.Core.Services;
+using ECommerceCsvImport.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IProductRepository, InMemoryProductRepository>();
 builder.Services.AddSingleton<IProductImportService, ProductImportService>();
+builder.Logging.AddProvider(new FileLoggerProvider(Path.Combine(builder.Environment.ContentRootPath, "logs", "import.log")));
 
 var app = builder.Build();
 

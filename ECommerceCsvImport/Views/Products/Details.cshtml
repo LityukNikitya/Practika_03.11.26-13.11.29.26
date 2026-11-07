@@ -1,0 +1,67 @@
+@model ECommerceCsvImport.Core.Models.Product
+@{
+    ViewData["Title"] = "Товар " + Model.Sku;
+}
+
+<h1 class="display-5 mb-4">@Model.Name</h1>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped align-middle mb-0">
+                <tbody>
+                    <tr>
+                        <th style="width: 30%">Артикул</th>
+                        <td>@Model.Sku</td>
+                    </tr>
+                    <tr>
+                        <th>Название</th>
+                        <td>@Model.Name</td>
+                    </tr>
+                    <tr>
+                        <th>Описание</th>
+                        <td>@Model.Description</td>
+                    </tr>
+                    <tr>
+                        <th>Цена</th>
+                        <td>@Model.Price.ToString("N0")</td>
+                    </tr>
+                    <tr>
+                        <th>Валюта</th>
+                        <td>@Model.Currency</td>
+                    </tr>
+                    <tr>
+                        <th>Категория</th>
+                        <td>@Model.CategoryName</td>
+                    </tr>
+                    <tr>
+                        <th>Остаток</th>
+                        <td>@Model.StockQuantity</td>
+                    </tr>
+                    <tr>
+                        <th>Изображение</th>
+                        <td>@Model.ImageUrl</td>
+                    </tr>
+                    <tr>
+                        <th>Активен</th>
+                        <td>@(Model.IsActive ? "Да" : "Нет")</td>
+                    </tr>
+                    <tr>
+                        <th>Бренд</th>
+                        <td>@Model.Brand</td>
+                    </tr>
+                    <tr>
+                        <th>Гарантия, мес.</th>
+                        <td>@Model.WarrantyMonths</td>
+                    </tr>
+                    <tr>
+                        <th>Модель</th>
+                        <td>@Model.ModelNumber</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<a asp-action="Index" class="btn btn-primary mt-3">Назад к списку товаров</a>
